@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ユーザ詳細画面</title>
+</head>
+<body>
+    <h3>ユーザ詳細画面</h3>
+    <ul>
+        <p>{{.user.Id}}</p>
+    <form  method="post">
+        <input type="hidden" name="id" value={{.user.Id}}></input>
+        <input type="text" name="name" value="{{.user.Name}}"></input>
+        <input type="text" name="departure" value="{{.user.Departure}}"></input>
+
+        <input type="submit" value="送信" formaction="/edit">
+        <input type="submit" value="削除" formaction="/delete">
+    </form>
+    </body>
+</html>

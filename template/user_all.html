@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>getall</h1>
+    <ul>
+    {{range $index, $user:=.users}}
+    <li><a href="/detail/{{$user.Id}}" style="color:black;">{{$user.Id}}:{{$user.Name}}_{{$user.Departure}}</a></li>
+    {{end}}
+    </ul>
+
+    <form action="/top" method="get">
+        <button>back to top</button>
+    </form>
+    </body>
+</html>
